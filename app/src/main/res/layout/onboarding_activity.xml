@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blackBack"
+    android:layout_height="match_parent"
+    tools:context=".OnBoardingActivity">
+
+   <LinearLayout
+       android:id="@+id/progresses"
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:layout_gravity="center"
+       android:gravity="center"
+       android:background="@drawable/circle_shape"
+       android:layout_height="@dimen/_60sdp">
+
+      <com.google.android.material.progressindicator.LinearProgressIndicator
+          android:id="@+id/progressView1"
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="@dimen/_4sdp"
+          android:layout_marginBottom="@dimen/_8sdp"
+          android:layout_marginHorizontal="@dimen/_2sdp"
+          app:trackColor="#8B6C5656"
+          app:trackCornerRadius="1.5dp"
+          app:trackThickness="@dimen/_3sdp"
+          android:progress="0"
+          app:indicatorColor="@color/selectedColor"
+          app:layout_constraintTop_toBottomOf="@id/viewPager"/>
+
+      <com.google.android.material.progressindicator.LinearProgressIndicator
+          android:id="@+id/progressView2"
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="@dimen/_4sdp"
+          android:layout_marginBottom="@dimen/_8sdp"
+          android:layout_marginHorizontal="@dimen/_2sdp"
+          app:trackColor="#8B6C5656"
+          app:trackCornerRadius="3dp"
+          app:trackThickness="@dimen/_3sdp"
+          android:progress="15"
+          app:indicatorColor="@color/selectedColor"
+          app:layout_constraintTop_toBottomOf="@id/viewPager"/>
+
+      <com.google.android.material.progressindicator.LinearProgressIndicator
+          android:id="@+id/progressView3"
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="@dimen/_4sdp"
+          android:layout_marginBottom="@dimen/_8sdp"
+          android:layout_marginHorizontal="@dimen/_2sdp"
+          app:trackColor="#8B6C5656"
+          app:trackCornerRadius="3dp"
+          app:trackThickness="@dimen/_3sdp"
+          android:progress="15"
+          app:indicatorColor="@color/selectedColor"
+          app:layout_constraintTop_toBottomOf="@id/viewPager"/>
+
+   </LinearLayout>
+
+
+   <androidx.viewpager2.widget.ViewPager2
+       android:id="@+id/viewPager"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:layout_gravity="center"
+       android:gravity="center"
+       android:layout_height="wrap_content">
+
+      <ImageView
+          android:id="@id/backBtn"
+          android:layout_width="@dimen/_24sdp"
+          app:tint="@color/white2"
+          android:src="@drawable/ic_round_arrow_back_ios_24"
+          android:layout_height="@dimen/_24sdp"
+          android:contentDescription="arrow" />
+
+      <Button
+          android:id="@+id/btnContinue"
+          android:layout_width="@dimen/_150sdp"
+          android:text="Let's Start"
+          android:textStyle="bold"
+          android:textSize="@dimen/_13ssp"
+          android:layout_gravity="center"
+          android:textAllCaps="false"
+          android:background="@drawable/buttonround"
+          android:layout_marginHorizontal="@dimen/_45sdp"
+          android:layout_marginVertical="@dimen/_12sdp"
+          android:layout_height="wrap_content"/>
+
+      <ImageView
+          android:id="@+id/btnForward"
+          android:layout_width="@dimen/_24sdp"
+          app:tint="@color/white2"
+          android:src="@drawable/ic_round_arrow_forward_ios_24"
+          android:layout_height="@dimen/_24sdp"
+          android:contentDescription="arrow" />
+
+   </LinearLayout>
+
+
+
+   <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+       android:id="@+id/dots_indicator"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_marginStart="@dimen/_8sdp"
+       android:layout_marginTop="@dimen/_8sdp"
+       android:layout_marginEnd="@dimen/_8sdp"
+       android:layout_marginBottom="@dimen/_8sdp"
+       app:dotsColor="@color/unSelectedColor"
+       app:dotsCornerRadius="8dp"
+       app:dotsSize="@dimen/_5ssp"
+       app:dotsSpacing="@dimen/_3sdp"
+       app:dotsWidthFactor="2.5"
+       app:layout_constraintBottom_toTopOf="@id/viewPager"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:progressMode="true"
+       app:selectedDotColor="@color/selectedColor" />
+
+</LinearLayout>
